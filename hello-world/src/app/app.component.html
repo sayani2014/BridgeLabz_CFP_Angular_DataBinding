@@ -1,14 +1,17 @@
 <!--
-  UC3 : Ability To launch BridgeLabz Site in a new Tab on clicking BridgeLabz Logo.
-        - Use Event Binding Technique to bind Click Event to Launch BridgeLabz URL in a new Tab.
+  UC4 : To display Hello from BridgeLabz with a user inputted name.
+        - Make sure it is two way binding so that the change in the value can be reflected in the Hello Message.
 
   @author : SAYANI KOLEY
   @since : 21.08.2021
 -->
 
 <div class="container">
-  <h1>Hello from BridgeLabz</h1>
+  <h1>Hello {{this.userName}} from BridgeLabz</h1>
   <img [src]="imgUrl" (click)="onClick($event)" alt="The BridgeLabz logo : a Bridge to Employement through a Lab works."/>
+</div>
+<div class="container">
+  <input [(ngModel)]="userName"/>
 </div>
 
 <router-outlet></router-outlet>
