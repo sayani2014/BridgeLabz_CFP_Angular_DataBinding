@@ -9,8 +9,12 @@ export class AppComponent {
   title = 'hello-world';
   imgUrl;
   url;
-
   
+  /**
+    * Specify userName as String Type.
+    */
+  userName: string = "";
+
   /**
     * Method with no return type.
     * A lifecycle hook that is called after Angular has initialized all data-bound properties of a directive. 
@@ -33,7 +37,7 @@ export class AppComponent {
      */
     this.url = "https://www.bridgelabz.com";
   }
-  
+
   /**
     * Declaring the onClick($event) to implement the concept of Event Binding.
     * window.open : The window object represents an open window in a browser.
@@ -44,4 +48,3 @@ export class AppComponent {
     console.log("Save button is clicked!", $event);
     window.open(this.url, "_blank");
   }
-}

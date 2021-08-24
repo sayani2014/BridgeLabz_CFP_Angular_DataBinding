@@ -1,23 +1,30 @@
 <!--
-  UC3 : Ability To launch BridgeLabz Site in a new Tab on clicking BridgeLabz Logo.
-        - Use Event Binding Technique to bind Click Event to Launch BridgeLabz URL in a new Tab.
+  UC4 : To display Hello from BridgeLabz with a user inputted name.
+        - Make sure it is two way binding so that the change in the value can be reflected in the Hello Message.
   @author : SAYANI KOLEY
   @since : 21.08.2021
 -->
 
 <div class="container">
-  
   <!--
-        Purpose : To display the title value to demonstrate Interpolation using Template Expression.
-                  The title value is mentioned in the app.component.ts file. 
+        Purpose : Ability to display Hello from BridgeLabz along with a user inputted name.
   -->
-  <h1>{{this.title}}</h1>
+  <h1>Hello {{this.userName}} from BridgeLabz</h1>
   
   <!--
-        Purpose : To bind the src property of an <img> element to a component's property. The property here is imgUrl -- Property Binding.
-                  To bind the click event of an <img> element to a component's event. The event here is onClick($event) -- Event Binding.
+        Purpose : To bind the src property of an <img> element to a component's property. The property here is imgUrl -- Property Binding. (One-way binding concept)
+                  To bind the click event of an <img> element to a component's event. The event here is onClick($event) -- Event Binding. (One-way binding concept)
   -->
   <img [src]="imgUrl" (click)="onClick($event)" alt="The BridgeLabz logo : a Bridge to Employement through a Lab works."/>
+</div>
+
+<div class="container">
+  
+  <!--
+        Purpose : Bind the input Form Element using [(ngModel)] to userName. (Two-way binding concept)
+                  ngModel : Creates a FormControl instance from a domain model and binds it to a form control element.
+  -->
+  <input [(ngModel)]="userName"/>
 </div>
 
 <router-outlet></router-outlet>
