@@ -7,7 +7,17 @@
 -->
 
 <div class="container">
+  
+  <!--
+        Purpose : To display the title value to demonstrate Interpolation using Template Expression.
+                  The title value is mentioned in the app.component.ts file. 
+  -->
   <h1>{{this.title}}</h1>
+  
+  <!--
+        Purpose : To bind the src property of an <img> element to a component's property. The property here is imgUrl -- Property Binding.
+                  To bind the click event of an <img> element to a component's event. The event here is onClick($event) -- Event Binding.
+  -->
   <img [src]="imgUrl" (click)="onClick($event)" alt="The BridgeLabz logo : a Bridge to Employement through a Lab works."/>
 </div>
 
