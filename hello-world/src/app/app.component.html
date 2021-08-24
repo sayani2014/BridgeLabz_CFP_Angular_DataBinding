@@ -8,10 +8,28 @@
 -->
 
 <div class="container">
+
+  <!--
+      Purpose : Ability to display Hello from BridgeLabz along with a user inputted name.
+  -->
   <h1>Hello {{this.userName}} from BridgeLabz</h1>
+
+  <!--
+      Purpose : To bind the src property of an <img> element to a component's property. The property here is imgUrl -- Property Binding. (One-way binding concept)
+                To bind the click event of an <img> element to a component's event. The event here is onClick($event) -- Event Binding. (One-way binding concept)
+  -->
   <img [src]="imgUrl" (click)="onClick($event)" alt="The BridgeLabz logo : a Bridge to Employement through a Lab works."/>
 </div>
+
 <div class="container">
+
+  <!--
+      Purpose : Bind the input Form Element using [(ngModel)] to userName. (Two-way binding concept)
+                ngModel : Creates a FormControl instance from a domain model and binds it to a form control element.
+                To bind the input event of an <input> element to a component's event. The event here is onInput($event).
+                When the user gives the input, the onInput($event) is called which checks whether the user-input match 
+                the regex. If a match occurs, then return nothing; else return error value.
+  -->
   <input (input)="onInput($event)" [(ngModel)]="userName"/>
   <span class="error-output">{{this.nameError}}</span>
 </div>
