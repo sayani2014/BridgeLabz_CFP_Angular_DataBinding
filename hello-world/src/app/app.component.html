@@ -1,13 +1,21 @@
 <!--
-  UC 2 : To display BridgeLabz Logo using Property Binding Technique.
-          - Modify App Component to display BridgeLabz Logo using Property Binding.
+  UC2 : To display BridgeLabz Logo using Property Binding Technique.
+         - Modify App Component to display BridgeLabz Logo using Property Binding.
 
   @author : SAYANI KOLEY
   @since : 21.08.2021
 -->
 
 <div class="container">
+   <!--
+        Purpose : To display the title value to demonstrate Interpolation using Template Expression.
+                  The title value is mentioned in the app.component.ts file. 
+  -->
   <h1>{{this.title}}</h1>
+  
+  <!--
+        Purpose : To bind the src property of an <img> element to a component's property. The property here is imgUrl.
+  -->
   <img [src]="imgUrl" alt="The BridgeLabz logo : a Bridge to Employement through a Lab works."/>
 </div>
 
