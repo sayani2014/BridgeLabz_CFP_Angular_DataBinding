@@ -1,19 +1,15 @@
 <!--
-  UC5 : To display Hello from BridgeLabz with a user inputted name.
-         - Ensure the userName is the valid input  consisting of Initial Caps and min 3 Letter.
-         - In Case Error display the error.
-
+  UC1 : To display “Hello from BridgeLabz” using One Way Data Bindings.
   @author : SAYANI KOLEY
   @since : 21.08.2021
 -->
 
 <div class="container">
-  <h1>Hello {{this.userName}} from BridgeLabz</h1>
-  <img [src]="imgUrl" (click)="onClick($event)" alt="The BridgeLabz logo : a Bridge to Employement through a Lab works."/>
-</div>
-<div class="container">
-  <input (input)="onInput($event)" [(ngModel)]="userName"/>
-  <span class="error-output">{{this.nameError}}</span>
+  <!--
+        Purpose : To display the title value to demonstrate Interpolation using Template Expression.
+                  The title value is mentioned in the app.component.ts file. 
+  -->
+  <h1>{{this.title}}</h1>
 </div>
 
 <router-outlet></router-outlet>

@@ -6,29 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hello-world';
-  imgUrl;
-  url;
-  userName: string = "";
-  nameError: string = "";
+  /**
+   * Declaring the title variable in string format (Typescript-way) and assigning value to it.
+   */
+  title: string = 'hello-world';
 
   ngOnInit(): void {
-    this.title = "Hello from BridgeLabz ";
-    this.imgUrl = "../assets/BL_logo_square_jpg.jpg";
-    this.url = "https://www.bridgelabz.com";
-  }
-
-  onClick($event) {
-    console.log("Save button is clicked!", $event);
-    window.open(this.url, "_blank");
-  }
-
-  onInput($event) {
-    const nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
-    if (nameRegex.test(this.userName)) {
-      this.nameError = "";
-      return;
-    }
-    this.nameError = "Name is incorrect!";
-  }
+    /**
+     * Overriding the above value of title variable and assigning a new value to the same variable.
+     */
+    this.title = "Hello from BridgeLabz";
+  } 
 }
